@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* || REST */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --SLATE-600: #1F314F;
+  --SLATE-500: #68778D;
+  --SLATE-300: #D5E1EF;
+  --WHITE: #FFFFFF;
+
+  /* TYPOGRAPHY */
+  --FF: "Outfit", serif;
+
+  /* TEXT STYLE */
+  --TEXT-PRESET-1: 700 1.375rem/120% var(--FF);
+  --TEXT-PRESET-2: 400 .9375rem/140% var(--FF);
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  display: grid;
+  place-content: center;
+  background-color: var(--SLATE-300);
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+/* QR CARD */
+.QR-Code-Content {
+  max-width: 320px;
+  min-height: 499px;
+  background-color: var(--WHITE);
+  border-radius: 1.25rem;
+  padding: 1rem 1rem 2.5rem 1rem;
+  margin: 9.7813rem 1.7188rem;
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+}
+
+/* QR CARD IMAGE */
+.QR-Code-Content__image {
+  width: 288px;
+  height: 288px;
+  border-radius: .625rem;
+  overflow: hidden;
+}
+
+.QR-Code-Content__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* QR CARD CONTENT */
+.QR-Code-Content__text {
+  width: 288px;
+  height: 131px;
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  padding: 0rem 1rem;
+}
+
+.text__title {
+  font: var(--TEXT-PRESET-1);
+  color: var(--SLATE-600);
+}
+
+.text__subtitle {
+  font: var(--TEXT-PRESET-2);
+  color: var(--SLATE-500);
+  letter-spacing: .0125rem;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+  /* QR CARD */
+  .QR-Code-Content {
+    margin: 14.4063rem auto;
+  }
+}
